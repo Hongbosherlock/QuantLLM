@@ -9,8 +9,8 @@ setup(
     ext_modules=[
         CUDAExtension(
             name='QuantLLM',
-            sources=['kernel/bindings.cpp', 
-                     'kernel/fp8_blockwise/gemm_fp8.cu'],
+            sources=['kernels/bindings.cpp', 
+                     'kernels/fp8_blockwise/gemm_fp8.cu'],
             extra_compile_args={
                 'nvcc': [
                     '-DNDEBUG',
@@ -21,15 +21,14 @@ setup(
                     '--ptxas-options=--warn-on-local-memory-usage',
                     '--ptxas-options=--warn-on-spills',
                     '--resource-usage',
-                    '--source-in-ptx',
-                    '-DCUTLASS_DEBUG_TRACE_LEVEL=1',
+                    '--source-in-ptx',s
                     '-gencode=arch=compute_90a, code=sm_90a',
                 ]
             },
             include_dirs=[
                 os.path.join(cutlass_path, 'include'),
                 os.path.join(cutlass_path, 'tools/util/include'),
-                'kernel/fp8_blockwise/cutlass_extensions',
+                'kernels/cutlass_extensions',
             ],
             libraries=['cuda'],
             library_dirs=['/usr/local/cuda/lib64'],
