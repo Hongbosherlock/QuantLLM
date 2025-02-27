@@ -34,7 +34,7 @@ QuantLLM is a high-performance library designed to accelerate large language mod
 To install QuantLLM, clone this repository and build it using CMake:
 
 ```bash
-git clone --recurse-submodules git@github.com:Hongbosherlock/QuantLLM.git
+git clone --recurse-submodules https://github.com/Hongbosherlock/QuantLLM.git
 cd QuantLLM
 source env.sh
 bash build_cutlass.sh
