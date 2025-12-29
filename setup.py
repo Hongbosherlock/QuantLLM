@@ -21,7 +21,7 @@ setup(
                     '--ptxas-options=--warn-on-local-memory-usage',
                     '--ptxas-options=--warn-on-spills',
                     '--resource-usage',
-                    '--source-in-ptx',s
+                    '--source-in-ptx',
                     '-gencode=arch=compute_90a, code=sm_90a',
                 ]
             },
