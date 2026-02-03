@@ -1,3 +1,5 @@
+// Inspired from: https://github.com/NVIDIA/cutlass/pull/1413
+
 #include <torch/extension.h>
 #include <cuda.h>
 #include <cuda_runtime.h>

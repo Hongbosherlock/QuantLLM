@@ -14,7 +14,8 @@ QuantLLM is a high-performance library designed to accelerate large language mod
 
 | Quantization Method | Supported |
 |---------------------|-----------|
-| W8A8-INT8           |  ⬜       |
+| W8A8-INT8           |   ✔        |
+| W4A8-INT8           |   ✔        |
 | W8A8-FP8-blockwise  |   ✔       |
 | W8A8-FP8            |  ⬜       |
 | W8A16               |  ⬜       |
